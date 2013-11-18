@@ -58,6 +58,26 @@ difference(){
 	hole(Rx, 52);
 	hole(Lx, 57);
 	hole(Rx, 57);
-
-
+	hole(Lx, 62);
+	hole(Rx, 62);
+	hole(Lx, 67);
+	hole(Rx, 67);
+	hole(Lx, 72);
+	hole(Rx, 72);
+	hole(Lx, 77);
+	hole(Rx, 77);
+	hole(Lx, 82);
+	hole(Rx, 82);
+	hole(Lx, 87);
+	hole(Rx, 87);
+	hole(Lx, 92);
+	hole(Rx, 92);
+	hole(Lx, 97);
+	hole(Rx, 97);
+	hole(Lx, 102);
+	hole(Rx, 102);
+	hole(Lx, 107);
+	hole(Rx, 107);
+	hole(Lx, 112);
+	hole(Rx, 112);
 }
