@@ -1,45 +1,45 @@
-/*
-cube(size=[75, 75, 2]);
-translate([37.5,75,0]) cylinder(h=2, r=37);
-*/
+//print two of this in Soft PLA
+
 
 Lx = 2.5;
 Rx = 97.5;
 
 
-//zipper strip (with 4 sections)
-cube(size=[100,7,1.5]); //x=100mm so that 5mm on each side of it can 
-				      //be fused together, so the opening is only 90mm
-	//1
-translate([5,0,1.5]) cube(size=[90,1,1.5]);
-	//2
-translate([5,2,1.5]) cube(size=[90,1,1.5]);
-	//3
-translate([5,4,1.5]) cube(size=[90,1,1.5]);
-	//4
-translate([5,6,1.5]) cube(size=[90,1,1.5]);
-
 //body
 module body(){
-	translate([0,7,0]) cube(size=[100,110,1.5]);
-	translate([50,110,0]) cylinder(h=1.5, r=50);
+	translate([0,0,0]) cube(size=[115,110,0.5]);
+	translate([57.5,110,0]) cylinder(h=0.5, r=57);
 }
 
-//body();
+body();
+
 
 //holes? for attaching two pieces together (sewing)?
 module hole(x,y){
 	translate([x,y,-1])
 	cylinder(h=3, r=1);
 }
-
-
+/*
+module arcHoles(){
+	for ( i = [0:20] ){
+		rotate(i*180/21, [0,0,1])
+		translate([0,45,-1])
+		cylinder(h=3, r=1);
+	}
+}
+*/
+/*
 //with holes?
 difference(){
 	body();
 
-	hole(Lx, 12);
-	hole(Rx, 12);
+	for (i = [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95]){
+		translate([i,12,-1])
+		cylinder(h=3, r=1);
+	}
+
+	//hole(Lx, 12);
+	//hole(Rx, 12);
 	hole(Lx, 17);
 	hole(Rx, 17);
 	hole(Lx, 22);
@@ -80,4 +80,30 @@ difference(){
 	hole(Rx, 107);
 	hole(Lx, 112);
 	hole(Rx, 112);
+
+	translate([50,110,0]) rotate([0,0,-90]) arcHoles();
+
 }
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
